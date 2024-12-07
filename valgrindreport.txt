@@ -1,0 +1,77 @@
+$ valgrind -s --leak-check=full ./main county_demographics.csv operations.txt
+==2042== Memcheck, a memory error detector
+==2042== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==2042== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==2042== Command: ./main county_demographics.csv operations.txt
+==2042==
+Header line: "County","State","Age.Percent 65 and Older","Age.Percent Under 18 Years","Age.Percent Under 5 Years","Education.Bachelor's Degree or Higher","Education.High School or Higher","Employment.Nonemployer Establishments","Employment.Private Non-farm Employment","Employment.Private Non-farm Employment Percent Change","Employment.Private Non-farm Establishments","Ethnicities.American Indian and Alaska Native Alone","Ethnicities.Asian Alone","Ethnicities.Black Alone","Ethnicities.Hispanic or Latino","Ethnicities.Native Hawaiian and Other Pacific Islander Alone","Ethnicities.Two or More Races","Ethnicities.White Alone","Ethnicities.White Alone not Hispanic or Latino","Housing.Homeownership Rate","Housing.Households","Housing.Housing Units","Housing.Median Value of Owner-Occupied Units","Housing.Persons per Household","Housing.Units in Multi-Unit Structures","Income.Median Household Income","Income.Per Capita Income","Income.Persons Below Poverty Level","Miscellaneous.Building Permits","Miscellaneous.Foreign Born","Miscellaneous.Land Area","Miscellaneous.Language Other than English at Home","Miscellaneous.Living in Same House +1 Years","Miscellaneous.Manufacturers Shipments","Miscellaneous.Mean Travel Time to Work","Miscellaneous.Percent Female","Miscellaneous.Veterans","Population.2010 Population","Population.2014 Population","Population.Population Percent Change","Population.Population per Square Mile","Sales.Accommodation and Food Services Sales","Sales.Merchant Wholesaler Sales","Sales.Retail Sales","Sales.Retail Sales per Capita","Employment.Firms.American Indian-Owned","Employment.Firms.Asian-Owned","Employment.Firms.Black-Owned","Employment.Firms.Hispanic-Owned","Employment.Firms.Native Hawaiian and Other Pacific Islander-Owned","Employment.Firms.Total","Employment.Firms.Women-Owned"
+
+Loaded 3143 entries successfully.
+===============================================================
+Filter: Education.Bachelor's Degree or Higher ge 60.00 (5 entries)
+County: Howard County, State: MD, 2014 Population: 309284
+   Age 65+: 12.20, Age Under 18: 24.60, Age Under 5: 6.00
+   Edu Bachelor's Plus: 60.00, Edu High School: 94.90
+   Nonemploy Est: 24634, Private Emp: 165518, Private Emp Chg: 5.30, Private Est: 8946
+   Eth AI/AN: 0.40, Eth Asian: 16.90, Eth Black: 18.60, Eth Hispanic: 6.40, Eth NH/PI: 0.10, Eth Multi: 3.60, Eth White: 60.40, Eth White Non-Hispanic: 55.40
+   Homeown Rate: 73.90, Households: 106142, Housing Units: 115311, Median Home Value: 428100, Persons per HH: 2.74, Multi-unit Struct: 24.70
+   Median Income: 109865, Per Cap Income: 48172, Poverty Rate: 4.60
+   Building Permits: 1446, Foreign Born: 18.20, Land Area: 250.74, Lang Non-English: 22.50, Same House 1 Yr: 88.90, Manuf Shipments: 23683, Mean Travel Time: 30.60, Percent Female: 51.00, Veterans: 18971
+   Population (2010): 287085, Population (2014): 309284, Population Chg: 7.70, Population Density: 1144.90
+   Sales Food & Accom: 5656, Sales Wholesale: 71708, Sales Retail: 45549, Sales Per Capita: 16622
+   Firms AI Owned: 0, Firms Asian Owned: 13, Firms Black Owned: 14, Firms Hispanic Owned: 2, Firms NH/PI Owned: 0, Firms Total: 30899, Firms Women Owned: 30
+County: Los Alamos County, State: NM, 2014 Population: 17682
+   Age 65+: 16.60, Age Under 18: 23.30, Age Under 5: 5.50
+   Edu Bachelor's Plus: 63.40, Edu High School: 97.00
+   Nonemploy Est: 1044, Private Emp: 0, Private Emp Chg: 0.00, Private Est: 377
+   Eth AI/AN: 1.30, Eth Asian: 6.40, Eth Black: 0.70, Eth Hispanic: 16.70, Eth NH/PI: 0.10, Eth Multi: 2.50, Eth White: 89.00, Eth White Non-Hispanic: 73.60
+   Homeown Rate: 75.40, Households: 7590, Housing Units: 8312, Median Home Value: 284500, Persons per HH: 2.35, Multi-unit Struct: 22.60
+   Median Income: 106686, Per Cap Income: 51044, Poverty Rate: 4.40
+   Building Permits: 3, Foreign Born: 9.70, Land Area: 109.17, Lang Non-English: 16.40, Same House 1 Yr: 86.80, Manuf Shipments: 0, Mean Travel Time: 16.00, Percent Female: 49.20, Veterans: 1809
+   Population (2010): 17950, Population (2014): 17682, Population Chg: -1.50, Population Density: 164.40
+   Sales Food & Accom: 177, Sales Wholesale: 0, Sales Retail: 979, Sales Per Capita: 5279
+   Firms AI Owned: 0, Firms Asian Owned: 2, Firms Black Owned: 0, Firms Hispanic Owned: 6, Firms NH/PI Owned: 0, Firms Total: 1496, Firms Women Owned: 49
+County: Arlington County, State: VA, 2014 Population: 226908
+   Age 65+: 9.30, Age Under 18: 17.20, Age Under 5: 6.20
+   Edu Bachelor's Plus: 71.70, Edu High School: 93.30
+   Nonemploy Est: 17539, Private Emp: 132556, Private Emp Chg: 1.70, Private Est: 6219
+   Eth AI/AN: 0.70, Eth Asian: 10.30, Eth Black: 9.10, Eth Hispanic: 15.70, Eth NH/PI: 0.10, Eth Multi: 3.20, Eth White: 76.60, Eth White Non-Hispanic: 62.80
+   Homeown Rate: 45.20, Households: 94454, Housing Units: 110601, Median Home Value: 584600, Persons per HH: 2.24, Multi-unit Struct: 63.30
+   Median Income: 103208, Per Cap Income: 62018, Poverty Rate: 8.00
+   Building Permits: 2160, Foreign Born: 23.00, Land Area: 25.97, Lang Non-English: 29.00, Same House 1 Yr: 78.90, Manuf Shipments: 0, Mean Travel Time: 27.30, Percent Female: 49.90, Veterans: 12638
+   Population (2010): 207627, Population (2014): 226908, Population Chg: 9.30, Population Density: 7993.60
+   Sales Food & Accom: 11640, Sales Wholesale: 4531, Sales Retail: 24829, Sales Per Capita: 12176
+   Firms AI Owned: 0, Firms Asian Owned: 9, Firms Black Owned: 6, Firms Hispanic Owned: 8, Firms NH/PI Owned: 0, Firms Total: 19422, Firms Women Owned: 32
+County: Alexandria city, State: VA, 2014 Population: 150575
+   Age 65+: 10.10, Age Under 18: 17.80, Age Under 5: 7.50
+   Edu Bachelor's Plus: 61.40, Edu High School: 91.20
+   Nonemploy Est: 13472, Private Emp: 83411, Private Emp Chg: 0.10, Private Est: 4640
+   Eth AI/AN: 0.80, Eth Asian: 6.90, Eth Black: 22.60, Eth Hispanic: 16.60, Eth NH/PI: 0.10, Eth Multi: 3.10, Eth White: 66.40, Eth White Non-Hispanic: 52.30
+   Homeown Rate: 43.30, Households: 65369, Housing Units: 75329, Median Home Value: 476700, Persons per HH: 2.17, Multi-unit Struct: 63.10
+   Median Income: 85706, Per Cap Income: 54608, Poverty Rate: 8.40
+   Building Permits: 1324, Foreign Born: 26.30, Land Area: 15.03, Lang Non-English: 31.10, Same House 1 Yr: 78.30, Manuf Shipments: 2845, Mean Travel Time: 30.50, Percent Female: 51.60, Veterans: 10810
+   Population (2010): 139966, Population (2014): 150575, Population Chg: 7.50, Population Density: 9314.30
+   Sales Food & Accom: 4717, Sales Wholesale: 5257, Sales Retail: 23537, Sales Per Capita: 16785
+   Firms AI Owned: 0, Firms Asian Owned: 7, Firms Black Owned: 14, Firms Hispanic Owned: 6, Firms NH/PI Owned: 0, Firms Total: 15161, Firms Women Owned: 32
+County: Falls Church city, State: VA, 2014 Population: 13601
+   Age 65+: 11.40, Age Under 18: 26.60, Age Under 5: 7.30
+   Edu Bachelor's Plus: 74.40, Edu High School: 97.30
+   Nonemploy Est: 1332, Private Emp: 9487, Private Emp Chg: 1.10, Private Est: 865
+   Eth AI/AN: 0.50, Eth Asian: 9.30, Eth Black: 5.30, Eth Hispanic: 9.50, Eth NH/PI: 0.10, Eth Multi: 4.30, Eth White: 80.60, Eth White Non-Hispanic: 72.30
+   Homeown Rate: 59.40, Households: 5020, Housing Units: 5496, Median Home Value: 660900, Persons per HH: 2.53, Multi-unit Struct: 44.20
+   Median Income: 120000, Per Cap Income: 59088, Poverty Rate: 4.00
+   Building Permits: 547, Foreign Born: 16.90, Land Area: 2.00, Lang Non-English: 23.40, Same House 1 Yr: 79.10, Manuf Shipments: 0, Mean Travel Time: 27.30, Percent Female: 51.00, Veterans: 686
+   Population (2010): 12332, Population (2014): 13601, Population Chg: 10.70, Population Density: 6169.10
+   Sales Food & Accom: 562, Sales Wholesale: 0, Sales Retail: 2880, Sales Per Capita: 26089
+   Firms AI Owned: 0, Firms Asian Owned: 0, Firms Black Owned: 0, Firms Hispanic Owned: 0, Firms NH/PI Owned: 0, Firms Total: 1479, Firms Women Owned: 32
+PROGRAM END
+==2042==
+==2042== HEAP SUMMARY:
+==2042==     in use at exit: 0 bytes in 0 blocks
+==2042==   total heap usage: 3,148 allocs, 3,148 frees, 1,857,751,336 bytes allocated
+==2042==
+==2042== All heap blocks were freed -- no leaks are possible
+==2042==
+==2042== For lists of detected and suppressed errors, rerun with: -s
+==2042== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+terra_subshell@Terrabrain:/mnt/c/users/moeat/Desktop/New folder/357-assignment-6-KrakenMInitials$
