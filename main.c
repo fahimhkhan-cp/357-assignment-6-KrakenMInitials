@@ -1241,7 +1241,7 @@ void operations(const char *operations_file, struct entry *entries, int *count)
                 char temp[256];
                 strcpy(temp, line + 7);
 
-                //printf("   field: %s\n", field);
+                printf("   field: '%s'\n", field);
                 //printf("   operator: %s\n", operator);
                 //printf("   number: %f\n", number);
                 filter(&entries, count, field, operator, number);
@@ -1267,7 +1267,7 @@ void operations(const char *operations_file, struct entry *entries, int *count)
         {
             char *field;
             field = line + 8;
-            printf("   field passed: %s", field);
+            //printf("   field passed: %s", field);
             percent(entries, *count, field);
         }
         else
