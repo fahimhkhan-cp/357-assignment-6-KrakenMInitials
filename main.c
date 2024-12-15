@@ -878,8 +878,13 @@ void filter(struct entry **entries, int *count, const char *field, const char *o
         }
     }
 
-
     struct entry *filtered_entries = malloc(sizeof(struct entry) * new_count);
+    if (filtered_entries == NULL)
+    {
+        perror("Failed to allocate memory");
+        exit(1);
+    }
+
     int j = 0;
     for (int i = 0; i < *count; i++)
     {
@@ -1005,11 +1010,10 @@ void filter(struct entry **entries, int *count, const char *field, const char *o
             }
         }
 
-
     }
-
-    //free(*entries);
+    free(*entries);
     *entries = filtered_entries;
+    free(filtered_entries);
     *count = new_count;
 
     printf("Filter: %s %s %.2f (%d entries)\n", field, operator, number, *count);
@@ -1323,7 +1327,7 @@ int main(int argc, char *argv[])
 
     operations(operations_file, entries, &count);
 
-    free(entries);
+    //free(entries);
     printf("PROGRAM END\n");
     return 0;
 }
